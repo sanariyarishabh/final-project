@@ -16,7 +16,6 @@ export async function POST(request: Request) {
     try {
         const body = await request.json();
 
-        // Validation
         if (!body.UserName || !body.EmailAddress || !body.Password) {
             return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
         }
